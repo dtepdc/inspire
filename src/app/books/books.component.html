@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="authorInfo">
+        <div><b>Author</b>: {{ bookInfo.author }}</div>
+        <div><b>Birthday</b>: {{ bookInfo.birthday }}</div>
+        <div><b>Birth Place</b>: {{ bookInfo.birthPlace }}</div>
+    </div>
+    <div class="row">
+        <div *ngFor="let b of bookInfo.books" class="books col-md-6">
+            <div class="card">
+                <div class="image">
+                    <a href="{{ b.purchaseLink }}">
+                        <img class="card-img-top" src="{{ b.imageUrl }}" height="218" alt="{{b.title }}">
+                    </a>
+                </div>
+                <div class="card-body display-flex">
+                    <h6 class="card-title"><a href="{{ b.purchaseLink }}">{{ b.title }}</a></h6>
+                    <p class="card-text">
+                        {{ b.PublishDate }}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
